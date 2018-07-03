@@ -7,6 +7,21 @@
 //
 
 #import "ViewController.h"
+#import "MutableColorGradientViewController.h"
+
+// 屏幕的宽度
+#define kScreenWidth [[UIScreen mainScreen] bounds].size.width
+// 屏幕的高度
+#define kScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+// 系统状态栏高度
+#define kStatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
+
+// 设置RGB颜色值
+#define COLOR(R,G,B,A)    [UIColor colorWithRed:(CGFloat)R/255.0 green:(CGFloat)G/255.0 blue:(CGFloat)B/255.0 alpha:A]
+
+#define Padding 10.f
+#define HeightBtn 45.f
 
 @interface ViewController ()
 
@@ -17,28 +32,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor redColor]];
+    UIButton *mutableColorGradientBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kStatusBarHeight + Padding, kScreenWidth - (Padding * 2), HeightBtn)];
+    [mutableColorGradientBtn setTitle:@"彩色渐变 - 全屏幕" forState:UIControlStateNormal];
+    mutableColorGradientBtn.layer.cornerRadius = 4.f;
+    [mutableColorGradientBtn setBackgroundColor:[UIColor redColor]];
+    [mutableColorGradientBtn addTarget:self action:@selector(mutableColorGradientBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:mutableColorGradientBtn];
     
-    UIView *alphaView  = [[UIView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:alphaView];
-    
-    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-    // 红黄蓝渐变
-    //    gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor, (__bridge id)[UIColor yellowColor].CGColor, (__bridge id)[UIColor blueColor].CGColor];
-    // 白色 -> 透明
-    gradientLayer.colors = @[(__bridge id)[UIColor colorWithWhite:1 alpha:0].CGColor, (__bridge id)[UIColor colorWithWhite:1 alpha:0.5].CGColor, (__bridge id)[UIColor colorWithWhite:1 alpha:1].CGColor];
-    
-    gradientLayer.locations = @[@0.0, @0.5, @1.0];
-    // 从下到上的渐变：[0，0] -> [0, 1]    从左到右的渐变:[0,0] -> [1,0]
-    gradientLayer.startPoint = CGPointMake(0, 0);
-    gradientLayer.endPoint = CGPointMake(0, 1.0);
-    // 部分区域渐变
-    //    gradientLayer.frame = CGRectMake(0, 100, 300, 100);
-    // 整个视图渐变
-    gradientLayer.frame = self.view.bounds;
-    [alphaView.layer addSublayer:gradientLayer];
     
 }
 
+#pragma mark - Event
+
+-(void) mutableColorGradientBtnClick
+{
+    MutableColorGradientViewController *MCGVC = [[MutableColorGradientViewController alloc] init];
+    [self presentViewController:MCGVC animated:YES completion:nil];
+}
 
 @end

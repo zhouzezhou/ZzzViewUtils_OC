@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E51295720EB6FA00053F9FC /* MutableColorGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E51295620EB6FA00053F9FC /* MutableColorGradientViewController.m */; };
 		5E5EC6B720E898D100957497 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EC6B620E898D100957497 /* AppDelegate.m */; };
 		5E5EC6BA20E898D100957497 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EC6B920E898D100957497 /* ViewController.m */; };
 		5E5EC6BD20E898D100957497 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5EC6BB20E898D100957497 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E51295520EB6FA00053F9FC /* MutableColorGradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutableColorGradientViewController.h; sourceTree = "<group>"; };
+		5E51295620EB6FA00053F9FC /* MutableColorGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutableColorGradientViewController.m; sourceTree = "<group>"; };
 		5E5EC6B220E898D000957497 /* ZzzUIViewColorGradient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZzzUIViewColorGradient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5EC6B520E898D000957497 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E5EC6B620E898D100957497 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				5E5EC6B620E898D100957497 /* AppDelegate.m */,
 				5E5EC6B820E898D100957497 /* ViewController.h */,
 				5E5EC6B920E898D100957497 /* ViewController.m */,
+				5E51295520EB6FA00053F9FC /* MutableColorGradientViewController.h */,
+				5E51295620EB6FA00053F9FC /* MutableColorGradientViewController.m */,
 				5E5EC6BB20E898D100957497 /* Main.storyboard */,
 				5E5EC6BE20E898D100957497 /* Assets.xcassets */,
 				5E5EC6C020E898D100957497 /* LaunchScreen.storyboard */,
@@ -142,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E5EC6BA20E898D100957497 /* ViewController.m in Sources */,
+				5E51295720EB6FA00053F9FC /* MutableColorGradientViewController.m in Sources */,
 				5E5EC6C520E898D100957497 /* main.m in Sources */,
 				5E5EC6B720E898D100957497 /* AppDelegate.m in Sources */,
 			);
