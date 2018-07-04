@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MutableColorGradientViewController.h"
+#import "GradientLineSeparateViewController.h"
 
 // 屏幕的宽度
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
@@ -40,6 +41,12 @@
     [self.view addSubview:mutableColorGradientBtn];
     
     
+    UIButton *gradientLineSeparateBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kStatusBarHeight + Padding * 2 + HeightBtn * 1, kScreenWidth - (Padding * 2), HeightBtn)];
+    [gradientLineSeparateBtn setTitle:@"渐变线条分隔 - 线条" forState:UIControlStateNormal];
+    gradientLineSeparateBtn.layer.cornerRadius = 4.f;
+    [gradientLineSeparateBtn setBackgroundColor:[UIColor redColor]];
+    [gradientLineSeparateBtn addTarget:self action:@selector(gradientLineSeparateBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:gradientLineSeparateBtn];
 }
 
 #pragma mark - Event
@@ -48,6 +55,12 @@
 {
     MutableColorGradientViewController *MCGVC = [[MutableColorGradientViewController alloc] init];
     [self presentViewController:MCGVC animated:YES completion:nil];
+}
+
+-(void) gradientLineSeparateBtnClick
+{
+    GradientLineSeparateViewController *GLSVC = [[GradientLineSeparateViewController alloc] init];
+    [self presentViewController:GLSVC animated:YES completion:nil];
 }
 
 @end
