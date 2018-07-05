@@ -34,17 +34,28 @@
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    // 添加渐变线做为分隔线
-    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    // 添加渐变线做为分隔线1
+    CAGradientLayer *gradientLayer1 = [CAGradientLayer layer];
     // 黑色 -> 透明
-    gradientLayer.colors = @[(__bridge id)[UIColor colorWithWhite:0 alpha:0].CGColor, (__bridge id)[UIColor colorWithWhite:0 alpha:0.08].CGColor, (__bridge id)[UIColor colorWithWhite:0 alpha:0.16].CGColor];
-    gradientLayer.locations = @[@0.0, @0.5, @1.0];
+    gradientLayer1.colors = @[(__bridge id)[UIColor colorWithWhite:0 alpha:0].CGColor, (__bridge id)[UIColor colorWithWhite:0 alpha:0.08].CGColor, (__bridge id)[UIColor colorWithWhite:0 alpha:0.16].CGColor];
+    gradientLayer1.locations = @[@0.0, @0.5, @1.0];
     // 从上到下的渐变：[0，1] -> [0, 0]    从左到右的渐变:[0,0] -> [1,0]
-    gradientLayer.startPoint = CGPointMake(0, 0);
-    gradientLayer.endPoint = CGPointMake(0, 1.0);
+    gradientLayer1.startPoint = CGPointMake(0, 0);
+    gradientLayer1.endPoint = CGPointMake(0, 1.0);
     float heightGradientLine = 8.f;
-    gradientLayer.frame = CGRectMake(0, 100, self.view.bounds.size.width, heightGradientLine);
-    [self.view.layer addSublayer:gradientLayer];
+    gradientLayer1.frame = CGRectMake(0, 100, self.view.bounds.size.width, heightGradientLine);
+    [self.view.layer addSublayer:gradientLayer1];
+    
+    // 添加渐变线做为分隔线2
+    CAGradientLayer *gradientLayer2 = [CAGradientLayer layer];
+    // 黑色 -> 透明
+    gradientLayer2.colors = @[(__bridge id)[UIColor colorWithWhite:0 alpha:0].CGColor, (__bridge id)[UIColor colorWithWhite:0 alpha:0.08].CGColor, (__bridge id)[UIColor colorWithWhite:0 alpha:0.16].CGColor];
+    gradientLayer2.locations = @[@0.0, @0.5, @1.0];
+    // 从上到下的渐变：[0，1] -> [0, 0]    从左到右的渐变:[0,0] -> [1,0]
+    gradientLayer2.startPoint = CGPointMake(0, 1);
+    gradientLayer2.endPoint = CGPointMake(0, 0);
+    gradientLayer2.frame = CGRectMake(0, 100 + 100, self.view.bounds.size.width, heightGradientLine);
+    [self.view.layer addSublayer:gradientLayer2];
     
     
     
