@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MutableColorGradientViewController.h"
 #import "GradientLineSeparateViewController.h"
+#import "ShapeForPathGradientViewController.h"
 
 // 屏幕的宽度
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
@@ -47,6 +48,13 @@
     [gradientLineSeparateBtn setBackgroundColor:[UIColor redColor]];
     [gradientLineSeparateBtn addTarget:self action:@selector(gradientLineSeparateBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:gradientLineSeparateBtn];
+    
+    UIButton *ShapeForPathGradientBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kStatusBarHeight + Padding * 3 + HeightBtn * 2, kScreenWidth - (Padding * 2), HeightBtn)];
+    [ShapeForPathGradientBtn setTitle:@"不规则图形渐变" forState:UIControlStateNormal];
+    ShapeForPathGradientBtn.layer.cornerRadius = 4.f;
+    [ShapeForPathGradientBtn setBackgroundColor:[UIColor redColor]];
+    [ShapeForPathGradientBtn addTarget:self action:@selector(ShapeForPathGradientBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:ShapeForPathGradientBtn];
 }
 
 #pragma mark - Event
@@ -62,5 +70,13 @@
     GradientLineSeparateViewController *GLSVC = [[GradientLineSeparateViewController alloc] init];
     [self presentViewController:GLSVC animated:YES completion:nil];
 }
+
+-(void) ShapeForPathGradientBtnClick
+{
+    ShapeForPathGradientViewController *SFPGVC = [[ShapeForPathGradientViewController alloc] init];
+    [self presentViewController:SFPGVC animated:YES completion:nil];
+}
+
+
 
 @end

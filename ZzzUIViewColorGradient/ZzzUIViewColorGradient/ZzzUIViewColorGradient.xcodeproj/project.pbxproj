@@ -14,6 +14,7 @@
 		5E5EC6BF20E898D100957497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5EC6BE20E898D100957497 /* Assets.xcassets */; };
 		5E5EC6C220E898D100957497 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5EC6C020E898D100957497 /* LaunchScreen.storyboard */; };
 		5E5EC6C520E898D100957497 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EC6C420E898D100957497 /* main.m */; };
+		5E5FA37D20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FA37C20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m */; };
 		5E9FE80B20ECFF4500624EC8 /* GradientLineSeparateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9FE80A20ECFF4500624EC8 /* GradientLineSeparateViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		5E5EC6C120E898D100957497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E5EC6C320E898D100957497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E5EC6C420E898D100957497 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E5FA37B20F0F3CC0063EF6D /* ShapeForPathGradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShapeForPathGradientViewController.h; sourceTree = "<group>"; };
+		5E5FA37C20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeForPathGradientViewController.m; sourceTree = "<group>"; };
 		5E9FE80920ECFF4500624EC8 /* GradientLineSeparateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientLineSeparateViewController.h; sourceTree = "<group>"; };
 		5E9FE80A20ECFF4500624EC8 /* GradientLineSeparateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientLineSeparateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +75,8 @@
 				5E51295620EB6FA00053F9FC /* MutableColorGradientViewController.m */,
 				5E9FE80920ECFF4500624EC8 /* GradientLineSeparateViewController.h */,
 				5E9FE80A20ECFF4500624EC8 /* GradientLineSeparateViewController.m */,
+				5E5FA37B20F0F3CC0063EF6D /* ShapeForPathGradientViewController.h */,
+				5E5FA37C20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m */,
 				5E5EC6BB20E898D100957497 /* Main.storyboard */,
 				5E5EC6BE20E898D100957497 /* Assets.xcassets */,
 				5E5EC6C020E898D100957497 /* LaunchScreen.storyboard */,
@@ -156,6 +161,7 @@
 				5E9FE80B20ECFF4500624EC8 /* GradientLineSeparateViewController.m in Sources */,
 				5E5EC6C520E898D100957497 /* main.m in Sources */,
 				5E5EC6B720E898D100957497 /* AppDelegate.m in Sources */,
+				5E5FA37D20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
