@@ -16,6 +16,7 @@
 		5E5EC6C520E898D100957497 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5EC6C420E898D100957497 /* main.m */; };
 		5E5FA37D20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FA37C20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m */; };
 		5E9FE80B20ECFF4500624EC8 /* GradientLineSeparateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9FE80A20ECFF4500624EC8 /* GradientLineSeparateViewController.m */; };
+		5EFB820F20F3B2A70033EA35 /* CAShapeLayerMaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB820E20F3B2A70033EA35 /* CAShapeLayerMaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		5E5FA37C20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShapeForPathGradientViewController.m; sourceTree = "<group>"; };
 		5E9FE80920ECFF4500624EC8 /* GradientLineSeparateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientLineSeparateViewController.h; sourceTree = "<group>"; };
 		5E9FE80A20ECFF4500624EC8 /* GradientLineSeparateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientLineSeparateViewController.m; sourceTree = "<group>"; };
+		5EFB820D20F3B2A70033EA35 /* CAShapeLayerMaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAShapeLayerMaskViewController.h; sourceTree = "<group>"; };
+		5EFB820E20F3B2A70033EA35 /* CAShapeLayerMaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAShapeLayerMaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				5E9FE80A20ECFF4500624EC8 /* GradientLineSeparateViewController.m */,
 				5E5FA37B20F0F3CC0063EF6D /* ShapeForPathGradientViewController.h */,
 				5E5FA37C20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m */,
+				5EFB820D20F3B2A70033EA35 /* CAShapeLayerMaskViewController.h */,
+				5EFB820E20F3B2A70033EA35 /* CAShapeLayerMaskViewController.m */,
 				5E5EC6BB20E898D100957497 /* Main.storyboard */,
 				5E5EC6BE20E898D100957497 /* Assets.xcassets */,
 				5E5EC6C020E898D100957497 /* LaunchScreen.storyboard */,
@@ -161,6 +166,7 @@
 				5E9FE80B20ECFF4500624EC8 /* GradientLineSeparateViewController.m in Sources */,
 				5E5EC6C520E898D100957497 /* main.m in Sources */,
 				5E5EC6B720E898D100957497 /* AppDelegate.m in Sources */,
+				5EFB820F20F3B2A70033EA35 /* CAShapeLayerMaskViewController.m in Sources */,
 				5E5FA37D20F0F3CC0063EF6D /* ShapeForPathGradientViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,7 @@
 #import "MutableColorGradientViewController.h"
 #import "GradientLineSeparateViewController.h"
 #import "ShapeForPathGradientViewController.h"
+#import "CAShapeLayerMaskViewController.h"
 
 // 屏幕的宽度
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
@@ -55,6 +56,13 @@
     [ShapeForPathGradientBtn setBackgroundColor:[UIColor redColor]];
     [ShapeForPathGradientBtn addTarget:self action:@selector(ShapeForPathGradientBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:ShapeForPathGradientBtn];
+    
+    UIButton *CAShapeLayerMaskBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kStatusBarHeight + Padding * 4 + HeightBtn * 3, kScreenWidth - (Padding * 2), HeightBtn)];
+    [CAShapeLayerMaskBtn setTitle:@"加遮罩形成不规则图形渐变" forState:UIControlStateNormal];
+    CAShapeLayerMaskBtn.layer.cornerRadius = 4.f;
+    [CAShapeLayerMaskBtn setBackgroundColor:[UIColor redColor]];
+    [CAShapeLayerMaskBtn addTarget:self action:@selector(CAShapeLayerMaskBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:CAShapeLayerMaskBtn];
 }
 
 #pragma mark - Event
@@ -77,6 +85,10 @@
     [self presentViewController:SFPGVC animated:YES completion:nil];
 }
 
-
+-(void) CAShapeLayerMaskBtnClick
+{
+    CAShapeLayerMaskViewController *CASLMVC = [[CAShapeLayerMaskViewController alloc] init];
+    [self presentViewController:CASLMVC animated:YES completion:nil];
+}
 
 @end
