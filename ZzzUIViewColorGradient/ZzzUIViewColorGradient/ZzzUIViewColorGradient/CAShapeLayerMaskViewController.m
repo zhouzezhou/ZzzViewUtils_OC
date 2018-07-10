@@ -37,9 +37,30 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
     // 颜色渐变的图像
-//    self.firstCircle = [[UIImageView alloc] init];
+    self.firstCircle = [[UIImageView alloc] init];
+    self.firstCircle.frame = CGRectMake(0, 0, 200, 200);
     [self.firstCircle setBackgroundColor:[UIColor redColor]];
-    _firstCircle.frame = CGRectMake(0, 0, 200, 200);
+    
+    
+    _firstCircle.layer.masksToBounds = YES;
+    _firstCircle.alpha = 1.0;
+    
+    
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    // 红黄蓝渐变
+    gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor, (__bridge id)[UIColor yellowColor].CGColor, (__bridge id)[UIColor blueColor].CGColor];
+    // 颜色对应的位置,范围[0,1]
+    gradientLayer.locations = @[@0.0, @0.5, @1.0];
+
+    // 从下到上的渐变：[0，0] -> [0, 1]    从左到右的渐变:[0,0] -> [1,0]
+    gradientLayer.startPoint = CGPointMake(0, 1.0);
+    gradientLayer.endPoint = CGPointMake(0, 0);
+    // 部分区域渐变
+    //    gradientLayer.frame = CGRectMake(0, 100, 300, 100);
+    // 整个视图渐变
+    gradientLayer.frame = _firstCircle.bounds;
+    [_firstCircle.layer addSublayer:gradientLayer];
+    
     _firstCircle.center = CGPointMake(CGRectGetWidth(self.view.bounds) / 2.0, CGRectGetHeight(self.view.bounds) / 2.0);
     [self.view addSubview:self.firstCircle];
     
@@ -79,16 +100,34 @@
     return circlePath;
 }
 
-- (UIImageView *)firstCircle
-{
-    if (!_firstCircle) {
-        self.firstCircle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"circleBackground"]];
-        _firstCircle.layer.masksToBounds = YES;
-        _firstCircle.alpha = 1.0;
-    }
-    
-    return _firstCircle;
-}
+//- (UIImageView *)firstCircle
+//{
+//    if (!_firstCircle) {
+//        self.firstCircle = [[UIImageView alloc] init];
+//        [_firstCircle setBackgroundColor:[UIColor redColor]];
+//
+////        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+////        // 红黄蓝渐变
+////        gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor, (__bridge id)[UIColor yellowColor].CGColor, (__bridge id)[UIColor blueColor].CGColor];
+////        // 颜色对应的位置,范围[0,1]
+////        gradientLayer.locations = @[@0.0, @0.5, @1.0];
+////
+////        // 从下到上的渐变：[0，0] -> [0, 1]    从左到右的渐变:[0,0] -> [1,0]
+////        gradientLayer.startPoint = CGPointMake(0, 1.0);
+////        gradientLayer.endPoint = CGPointMake(0, 0);
+////        // 部分区域渐变
+////        //    gradientLayer.frame = CGRectMake(0, 100, 300, 100);
+////        // 整个视图渐变
+////        gradientLayer.frame = _firstCircle.bounds;
+////        [_firstCircle.layer addSublayer:gradientLayer];
+//
+//
+//        _firstCircle.layer.masksToBounds = YES;
+//        _firstCircle.alpha = 1.0;
+//    }
+//
+//    return _firstCircle;
+//}
 
 -(void) backBtnClick
 {
