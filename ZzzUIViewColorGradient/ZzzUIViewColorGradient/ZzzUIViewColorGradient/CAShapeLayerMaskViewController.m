@@ -65,8 +65,10 @@
     [self.view addSubview:self.firstCircle];
     
     // 加上遮罩
-    CGFloat firsCircleWidth = 5;
+    // 圆形环的粗细
+    CGFloat firsCircleWidth = 3;
     self.firstCircleShapeLayer = [self generateShapeLayerWithLineWidth:firsCircleWidth];
+    // 圆形环的位置
     _firstCircleShapeLayer.path = [self generateBezierPathWithCenter:CGPointMake(100, 100) radius:90].CGPath;
     _firstCircle.layer.mask = _firstCircleShapeLayer;
     
