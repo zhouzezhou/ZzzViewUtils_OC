@@ -45,7 +45,7 @@
     _firstCircle.layer.masksToBounds = YES;
     _firstCircle.alpha = 1.0;
     
-    
+    // 给imgview加上彩色渐变
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     // 红黄蓝渐变
     gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor, (__bridge id)[UIColor yellowColor].CGColor, (__bridge id)[UIColor blueColor].CGColor];
@@ -67,7 +67,7 @@
     // 加上遮罩
     CGFloat firsCircleWidth = 5;
     self.firstCircleShapeLayer = [self generateShapeLayerWithLineWidth:firsCircleWidth];
-    _firstCircleShapeLayer.path = [self generateBezierPathWithCenter:CGPointMake(100, 100) radius:100].CGPath;
+    _firstCircleShapeLayer.path = [self generateBezierPathWithCenter:CGPointMake(100, 100) radius:90].CGPath;
     _firstCircle.layer.mask = _firstCircleShapeLayer;
     
     
