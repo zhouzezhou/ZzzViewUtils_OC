@@ -58,6 +58,21 @@
     [self.view.layer addSublayer:gradientLayer2];
     
     
+    // 彩色与透明的渐变
+    CAGradientLayer *gradientLayer3 = [CAGradientLayer layer];
+    // 蓝色 -> 透明
+    gradientLayer3.colors = @[(__bridge id)COLOR(0x3E, 0x9E,0xFF,0).CGColor,
+                              (__bridge id)COLOR(0x3E, 0x9E,0xFF,0.16).CGColor];
+    gradientLayer3.locations = @[@0.0, @1.0];
+    // 从上到下的渐变：[0，1] -> [0, 0]    从左到右的渐变:[0,0] -> [1,0]
+    gradientLayer3.startPoint = CGPointMake(0, 1);
+    gradientLayer3.endPoint = CGPointMake(0, 0);
+    gradientLayer3.frame = CGRectMake(0, 100 + 100 * 2, self.view.bounds.size.width, 200);
+    [self.view.layer addSublayer:gradientLayer3];
+    
+    
+    
+    
     
     UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kScreenHeight - HeightBtn -  Padding, kScreenWidth - (Padding * 2), HeightBtn)];
     [backBtn setTitle:@"返  回" forState:UIControlStateNormal];

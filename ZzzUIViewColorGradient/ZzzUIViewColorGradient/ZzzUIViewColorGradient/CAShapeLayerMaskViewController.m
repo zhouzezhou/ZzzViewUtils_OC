@@ -68,7 +68,7 @@
     // 圆形环的粗细
     CGFloat firsCircleWidth = 3;
     self.firstCircleShapeLayer = [self generateShapeLayerWithLineWidth:firsCircleWidth];
-    // 圆形环的位置
+    // 圆形环的位置和半径大小
     _firstCircleShapeLayer.path = [self generateBezierPathWithCenter:CGPointMake(100, 100) radius:90].CGPath;
     _firstCircle.layer.mask = _firstCircleShapeLayer;
     
@@ -97,39 +97,11 @@
 
 - (UIBezierPath *)generateBezierPathWithCenter:(CGPoint)center radius:(CGFloat)radius
 {
-    UIBezierPath *circlePath = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:0 endAngle:2*M_PI clockwise:NO];
+    UIBezierPath *circlePath = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:0 endAngle:2 * M_PI clockwise:NO];
     
     return circlePath;
 }
 
-//- (UIImageView *)firstCircle
-//{
-//    if (!_firstCircle) {
-//        self.firstCircle = [[UIImageView alloc] init];
-//        [_firstCircle setBackgroundColor:[UIColor redColor]];
-//
-////        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-////        // 红黄蓝渐变
-////        gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor, (__bridge id)[UIColor yellowColor].CGColor, (__bridge id)[UIColor blueColor].CGColor];
-////        // 颜色对应的位置,范围[0,1]
-////        gradientLayer.locations = @[@0.0, @0.5, @1.0];
-////
-////        // 从下到上的渐变：[0，0] -> [0, 1]    从左到右的渐变:[0,0] -> [1,0]
-////        gradientLayer.startPoint = CGPointMake(0, 1.0);
-////        gradientLayer.endPoint = CGPointMake(0, 0);
-////        // 部分区域渐变
-////        //    gradientLayer.frame = CGRectMake(0, 100, 300, 100);
-////        // 整个视图渐变
-////        gradientLayer.frame = _firstCircle.bounds;
-////        [_firstCircle.layer addSublayer:gradientLayer];
-//
-//
-//        _firstCircle.layer.masksToBounds = YES;
-//        _firstCircle.alpha = 1.0;
-//    }
-//
-//    return _firstCircle;
-//}
 
 -(void) backBtnClick
 {
