@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ToolbarBlurViewController.h"
 
 
 // 屏幕的宽度
@@ -31,9 +32,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Home";
     
+    float navHeight = self.navigationController.navigationBar.bounds.size.height;
     
-    UIButton *toolbarBlurBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kStatusBarHeight + Padding, kScreenWidth - (Padding * 2), HeightBtn)];
+    UIButton *toolbarBlurBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding, kScreenWidth - (Padding * 2), HeightBtn)];
     [toolbarBlurBtn setTitle:@"使用UIToolbar达到模糊效果" forState:UIControlStateNormal];
     toolbarBlurBtn.layer.cornerRadius = 4.f;
     [toolbarBlurBtn setBackgroundColor:[UIColor redColor]];
@@ -41,21 +44,21 @@
     [self.view addSubview:toolbarBlurBtn];
     
     
-    UIButton *gradientLineSeparateBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kStatusBarHeight + Padding * 2 + HeightBtn * 1, kScreenWidth - (Padding * 2), HeightBtn)];
+    UIButton *gradientLineSeparateBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 2 + HeightBtn * 1, kScreenWidth - (Padding * 2), HeightBtn)];
     [gradientLineSeparateBtn setTitle:@"占位Btn2" forState:UIControlStateNormal];
     gradientLineSeparateBtn.layer.cornerRadius = 4.f;
     [gradientLineSeparateBtn setBackgroundColor:[UIColor redColor]];
     [gradientLineSeparateBtn addTarget:self action:@selector(gradientLineSeparateBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:gradientLineSeparateBtn];
     
-    UIButton *ShapeForPathGradientBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kStatusBarHeight + Padding * 3 + HeightBtn * 2, kScreenWidth - (Padding * 2), HeightBtn)];
+    UIButton *ShapeForPathGradientBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 3 + HeightBtn * 2, kScreenWidth - (Padding * 2), HeightBtn)];
     [ShapeForPathGradientBtn setTitle:@"占位Btn3" forState:UIControlStateNormal];
     ShapeForPathGradientBtn.layer.cornerRadius = 4.f;
     [ShapeForPathGradientBtn setBackgroundColor:[UIColor redColor]];
     [ShapeForPathGradientBtn addTarget:self action:@selector(ShapeForPathGradientBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:ShapeForPathGradientBtn];
     
-    UIButton *CAShapeLayerMaskBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kStatusBarHeight + Padding * 4 + HeightBtn * 3, kScreenWidth - (Padding * 2), HeightBtn)];
+    UIButton *CAShapeLayerMaskBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 4 + HeightBtn * 3, kScreenWidth - (Padding * 2), HeightBtn)];
     [CAShapeLayerMaskBtn setTitle:@"占位Btn4" forState:UIControlStateNormal];
     CAShapeLayerMaskBtn.layer.cornerRadius = 4.f;
     [CAShapeLayerMaskBtn setBackgroundColor:[UIColor redColor]];
@@ -63,7 +66,7 @@
     [self.view addSubview:CAShapeLayerMaskBtn];
     
     
-    UIButton *btn5 = [[UIButton alloc] initWithFrame:CGRectMake(Padding, kStatusBarHeight + Padding * 5 + HeightBtn * 4, kScreenWidth - (Padding * 2), HeightBtn)];
+    UIButton *btn5 = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 5 + HeightBtn * 4, kScreenWidth - (Padding * 2), HeightBtn)];
     [btn5 setTitle:@"占位Btn4" forState:UIControlStateNormal];
     btn5.layer.cornerRadius = 4.f;
     [btn5 setBackgroundColor:[UIColor redColor]];
@@ -76,8 +79,9 @@
 
 -(void) toolbarBlurBtnClick
 {
-    
-    
+    ToolbarBlurViewController *TBVC = [[ToolbarBlurViewController alloc] init];
+//    [self presentViewController:TBVC animated:YES completion:nil];
+    [self.navigationController pushViewController:TBVC animated:YES];
 }
 
 -(void) gradientLineSeparateBtnClick
