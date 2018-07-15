@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ToolbarBlurViewController.h"
+#import "VisualEffectViewController.h"
 
 
 // 屏幕的宽度
@@ -44,12 +45,12 @@
     [self.view addSubview:toolbarBlurBtn];
     
     
-    UIButton *gradientLineSeparateBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 2 + HeightBtn * 1, kScreenWidth - (Padding * 2), HeightBtn)];
-    [gradientLineSeparateBtn setTitle:@"占位Btn2" forState:UIControlStateNormal];
-    gradientLineSeparateBtn.layer.cornerRadius = 4.f;
-    [gradientLineSeparateBtn setBackgroundColor:[UIColor redColor]];
-    [gradientLineSeparateBtn addTarget:self action:@selector(gradientLineSeparateBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:gradientLineSeparateBtn];
+    UIButton *visualEffectBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 2 + HeightBtn * 1, kScreenWidth - (Padding * 2), HeightBtn)];
+    [visualEffectBtn setTitle:@"使用VisualEffect达到模糊效果" forState:UIControlStateNormal];
+    visualEffectBtn.layer.cornerRadius = 4.f;
+    [visualEffectBtn setBackgroundColor:[UIColor redColor]];
+    [visualEffectBtn addTarget:self action:@selector(visualEffectBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:visualEffectBtn];
     
     UIButton *ShapeForPathGradientBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 3 + HeightBtn * 2, kScreenWidth - (Padding * 2), HeightBtn)];
     [ShapeForPathGradientBtn setTitle:@"占位Btn3" forState:UIControlStateNormal];
@@ -84,9 +85,10 @@
     [self.navigationController pushViewController:TBVC animated:YES];
 }
 
--(void) gradientLineSeparateBtnClick
+-(void) visualEffectBtnClick
 {
-    
+    VisualEffectViewController *VEVC = [[VisualEffectViewController alloc] init];
+    [self.navigationController pushViewController:VEVC animated:YES];
 }
 
 -(void) ShapeForPathGradientBtnClick

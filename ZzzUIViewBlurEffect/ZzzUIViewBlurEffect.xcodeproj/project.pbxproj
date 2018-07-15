@@ -70,13 +70,13 @@
 				5EB04EDC20F874080009E949 /* ViewController.m */,
 				5EB04EEE20F877520009E949 /* ToolbarBlurViewController.h */,
 				5EB04EEF20F877520009E949 /* ToolbarBlurViewController.m */,
+				5ECA3A1320FBA6C90047302E /* VisualEffectViewController.h */,
+				5ECA3A1420FBA6C90047302E /* VisualEffectViewController.m */,
 				5EB04EDE20F874080009E949 /* Main.storyboard */,
 				5EB04EE120F8740A0009E949 /* Assets.xcassets */,
 				5EB04EE320F8740A0009E949 /* LaunchScreen.storyboard */,
 				5EB04EE620F8740A0009E949 /* Info.plist */,
 				5EB04EE720F8740A0009E949 /* main.m */,
-				5ECA3A1320FBA6C90047302E /* VisualEffectViewController.h */,
-				5ECA3A1420FBA6C90047302E /* VisualEffectViewController.m */,
 			);
 			path = ZzzUIViewBlurEffect;
 			sourceTree = "<group>";

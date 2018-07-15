@@ -30,13 +30,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"VisualEffect";
+    
+    UIImageView *imgV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backImgPic"]];
+    [imgV setFrame:self.view.bounds];
+    [self.view addSubview:imgV];
+    
     //实现模糊效果
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     //毛玻璃视图
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];;
-    effectView.frame = CGRectMake(0, 0, ScreenW/2, ScreenH);
+    effectView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     
-    [self.myImageView addSubview:effectView];
+    [imgV addSubview:effectView];
 }
 
 /*
