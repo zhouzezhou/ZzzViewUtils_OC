@@ -14,6 +14,7 @@
 		5EB04EE520F8740A0009E949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB04EE320F8740A0009E949 /* LaunchScreen.storyboard */; };
 		5EB04EE820F8740A0009E949 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB04EE720F8740A0009E949 /* main.m */; };
 		5EB04EF020F877530009E949 /* ToolbarBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB04EEF20F877520009E949 /* ToolbarBlurViewController.m */; };
+		5ECA3A1520FBA6C90047302E /* VisualEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECA3A1420FBA6C90047302E /* VisualEffectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		5EB04EE720F8740A0009E949 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5EB04EEE20F877520009E949 /* ToolbarBlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolbarBlurViewController.h; sourceTree = "<group>"; };
 		5EB04EEF20F877520009E949 /* ToolbarBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolbarBlurViewController.m; sourceTree = "<group>"; };
+		5ECA3A1320FBA6C90047302E /* VisualEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VisualEffectViewController.h; sourceTree = "<group>"; };
+		5ECA3A1420FBA6C90047302E /* VisualEffectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualEffectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				5EB04EE320F8740A0009E949 /* LaunchScreen.storyboard */,
 				5EB04EE620F8740A0009E949 /* Info.plist */,
 				5EB04EE720F8740A0009E949 /* main.m */,
+				5ECA3A1320FBA6C90047302E /* VisualEffectViewController.h */,
+				5ECA3A1420FBA6C90047302E /* VisualEffectViewController.m */,
 			);
 			path = ZzzUIViewBlurEffect;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			files = (
 				5EB04EDD20F874080009E949 /* ViewController.m in Sources */,
 				5EB04EF020F877530009E949 /* ToolbarBlurViewController.m in Sources */,
+				5ECA3A1520FBA6C90047302E /* VisualEffectViewController.m in Sources */,
 				5EB04EE820F8740A0009E949 /* main.m in Sources */,
 				5EB04EDA20F874080009E949 /* AppDelegate.m in Sources */,
 			);
