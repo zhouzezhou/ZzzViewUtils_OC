@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ToolbarBlurViewController.h"
 #import "VisualEffectViewController.h"
+#import "CoreImageBlurViewController.h"
 
 
 // 屏幕的宽度
@@ -52,12 +53,12 @@
     [visualEffectBtn addTarget:self action:@selector(visualEffectBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:visualEffectBtn];
     
-    UIButton *ShapeForPathGradientBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 3 + HeightBtn * 2, kScreenWidth - (Padding * 2), HeightBtn)];
-    [ShapeForPathGradientBtn setTitle:@"占位Btn3" forState:UIControlStateNormal];
-    ShapeForPathGradientBtn.layer.cornerRadius = 4.f;
-    [ShapeForPathGradientBtn setBackgroundColor:[UIColor redColor]];
-    [ShapeForPathGradientBtn addTarget:self action:@selector(ShapeForPathGradientBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:ShapeForPathGradientBtn];
+    UIButton *CoreImageBlurBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 3 + HeightBtn * 2, kScreenWidth - (Padding * 2), HeightBtn)];
+    [CoreImageBlurBtn setTitle:@"使用CoreImage达到模糊效果" forState:UIControlStateNormal];
+    CoreImageBlurBtn.layer.cornerRadius = 4.f;
+    [CoreImageBlurBtn setBackgroundColor:[UIColor redColor]];
+    [CoreImageBlurBtn addTarget:self action:@selector(CoreImageBlurBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:CoreImageBlurBtn];
     
     UIButton *CAShapeLayerMaskBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 4 + HeightBtn * 3, kScreenWidth - (Padding * 2), HeightBtn)];
     [CAShapeLayerMaskBtn setTitle:@"占位Btn4" forState:UIControlStateNormal];
@@ -91,9 +92,10 @@
     [self.navigationController pushViewController:VEVC animated:YES];
 }
 
--(void) ShapeForPathGradientBtnClick
+-(void) CoreImageBlurBtnClick
 {
-    
+    CoreImageBlurViewController *CIBVC = [[CoreImageBlurViewController alloc] init];
+    [self.navigationController pushViewController:CIBVC animated:YES];
 }
 
 -(void) CAShapeLayerMaskBtnClick
