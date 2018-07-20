@@ -10,7 +10,7 @@
 #import "ToolbarBlurViewController.h"
 #import "VisualEffectViewController.h"
 #import "CoreImageBlurViewController.h"
-
+#import "VImageViewController.h"
 
 // 屏幕的宽度
 #define kScreenWidth [[UIScreen mainScreen] bounds].size.width
@@ -60,12 +60,12 @@
     [CoreImageBlurBtn addTarget:self action:@selector(CoreImageBlurBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:CoreImageBlurBtn];
     
-    UIButton *CAShapeLayerMaskBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 4 + HeightBtn * 3, kScreenWidth - (Padding * 2), HeightBtn)];
-    [CAShapeLayerMaskBtn setTitle:@"占位Btn4" forState:UIControlStateNormal];
-    CAShapeLayerMaskBtn.layer.cornerRadius = 4.f;
-    [CAShapeLayerMaskBtn setBackgroundColor:[UIColor redColor]];
-    [CAShapeLayerMaskBtn addTarget:self action:@selector(CAShapeLayerMaskBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:CAShapeLayerMaskBtn];
+    UIButton *CVImageBtn = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 4 + HeightBtn * 3, kScreenWidth - (Padding * 2), HeightBtn)];
+    [CVImageBtn setTitle:@"使用CVImage达到模糊效果" forState:UIControlStateNormal];
+    CVImageBtn.layer.cornerRadius = 4.f;
+    [CVImageBtn setBackgroundColor:[UIColor redColor]];
+    [CVImageBtn addTarget:self action:@selector(CVImageBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:CVImageBtn];
     
     
     UIButton *btn5 = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 5 + HeightBtn * 4, kScreenWidth - (Padding * 2), HeightBtn)];
@@ -98,9 +98,10 @@
     [self.navigationController pushViewController:CIBVC animated:YES];
 }
 
--(void) CAShapeLayerMaskBtnClick
+-(void) CVImageBtnClick
 {
-    
+    VImageViewController *VIVC = [[VImageViewController alloc] init];
+    [self.navigationController pushViewController:VIVC animated:YES];
 }
 
 

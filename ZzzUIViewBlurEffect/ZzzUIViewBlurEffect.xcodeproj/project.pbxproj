@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E2E3ABD2101F6B2001548F1 /* VImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E3ABC2101F6B2001548F1 /* VImageViewController.m */; };
+		5E2E3AC02101F797001548F1 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E2E3ABF2101F797001548F1 /* Accelerate.framework */; };
 		5E3E969020FF6F4F00711D33 /* CoreImageBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3E968F20FF6F4F00711D33 /* CoreImageBlurViewController.m */; };
 		5EB04EDA20F874080009E949 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB04ED920F874080009E949 /* AppDelegate.m */; };
 		5EB04EDD20F874080009E949 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB04EDC20F874080009E949 /* ViewController.m */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E2E3ABB2101F6B2001548F1 /* VImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VImageViewController.h; sourceTree = "<group>"; };
+		5E2E3ABC2101F6B2001548F1 /* VImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VImageViewController.m; sourceTree = "<group>"; };
+		5E2E3ABF2101F797001548F1 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		5E3E968E20FF6F4F00711D33 /* CoreImageBlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreImageBlurViewController.h; sourceTree = "<group>"; };
 		5E3E968F20FF6F4F00711D33 /* CoreImageBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreImageBlurViewController.m; sourceTree = "<group>"; };
 		5EB04ED520F874080009E949 /* ZzzUIViewBlurEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZzzUIViewBlurEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,17 +47,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E2E3AC02101F797001548F1 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E2E3ABE2101F797001548F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E2E3ABF2101F797001548F1 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5EB04ECC20F874080009E949 = {
 			isa = PBXGroup;
 			children = (
 				5EB04ED720F874080009E949 /* ZzzUIViewBlurEffect */,
 				5EB04ED620F874080009E949 /* Products */,
+				5E2E3ABE2101F797001548F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +92,8 @@
 				5ECA3A1420FBA6C90047302E /* VisualEffectViewController.m */,
 				5E3E968E20FF6F4F00711D33 /* CoreImageBlurViewController.h */,
 				5E3E968F20FF6F4F00711D33 /* CoreImageBlurViewController.m */,
+				5E2E3ABB2101F6B2001548F1 /* VImageViewController.h */,
+				5E2E3ABC2101F6B2001548F1 /* VImageViewController.m */,
 				5EB04EDE20F874080009E949 /* Main.storyboard */,
 				5EB04EE120F8740A0009E949 /* Assets.xcassets */,
 				5EB04EE320F8740A0009E949 /* LaunchScreen.storyboard */,
@@ -162,6 +179,7 @@
 				5ECA3A1520FBA6C90047302E /* VisualEffectViewController.m in Sources */,
 				5EB04EE820F8740A0009E949 /* main.m in Sources */,
 				5EB04EDA20F874080009E949 /* AppDelegate.m in Sources */,
+				5E2E3ABD2101F6B2001548F1 /* VImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
