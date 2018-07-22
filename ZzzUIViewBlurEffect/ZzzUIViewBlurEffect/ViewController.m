@@ -67,14 +67,6 @@
     [CVImageBtn addTarget:self action:@selector(CVImageBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:CVImageBtn];
     
-    
-    UIButton *btn5 = [[UIButton alloc] initWithFrame:CGRectMake(Padding, navHeight + kStatusBarHeight + Padding * 5 + HeightBtn * 4, kScreenWidth - (Padding * 2), HeightBtn)];
-    [btn5 setTitle:@"占位Btn4" forState:UIControlStateNormal];
-    btn5.layer.cornerRadius = 4.f;
-    [btn5 setBackgroundColor:[UIColor redColor]];
-    [btn5 addTarget:self action:@selector(btn5Click) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn5];
-    
 }
 
 #pragma mark - Event
@@ -104,10 +96,5 @@
     [self.navigationController pushViewController:VIVC animated:YES];
 }
 
-
--(void) btn5Click
-{
-    
-}
 
 @end
