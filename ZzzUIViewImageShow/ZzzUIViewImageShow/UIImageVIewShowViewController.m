@@ -31,40 +31,18 @@
     [backviewTapGes addTarget:self action:@selector(backViewShouldTap:)];
     [self.view addGestureRecognizer:backviewTapGes];
     
-    float height_textViewHeight = 80.f;
+//    float height_textViewHeight = 80.f;
     
-    /*
-     typedef NS_ENUM(NSInteger, UIViewContentMode) {
-     UIViewContentModeScaleToFill,
-     UIViewContentModeScaleAspectFit,      // contents scaled to fit with fixed aspect. remainder is transparent
-     UIViewContentModeScaleAspectFill,     // contents scaled to fill with fixed aspect. some portion of content may be clipped.
-     UIViewContentModeRedraw,              // redraw on bounds change (calls -setNeedsDisplay)
-     UIViewContentModeCenter,              // contents remain same size. positioned adjusted.
-     UIViewContentModeTop,
-     UIViewContentModeBottom,
-     UIViewContentModeLeft,
-     UIViewContentModeRight,
-     UIViewContentModeTopLeft,
-     UIViewContentModeTopRight,
-     UIViewContentModeBottomLeft,
-     UIViewContentModeBottomRight,
-     };
-     */
-    
-    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - height_textViewHeight)];
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     [img setImage:[UIImage imageNamed:@"backImgPic"]];
-    [img setBackgroundColor:[UIColor redColor]];
+//    [img setBackgroundColor:[UIColor redColor]];
     // UIViewContentModeScaleToFill 缩放以显示图片里全部内容，会拉伸或压缩图片的宽高来达到要求（图片会变形）
     // UIViewContentModeScaleAspectFit 缩放以显示图片里全部内容，但图片宽高比不变
     // UIViewContentModeScaleAspectFill 缩放图放以填充满整个布局大小，边框上的有内容可能会显示不出来
     // UIViewContentModeRedraw 按bound大小重新绘制图片，图片会变形但能填充满bound，和UIViewContentModeScaleToFill相似
     // UIViewContentModeCenter 按实际像素比例显示图片的正中心
-    [img setContentMode:UIViewContentModeScaleToFill];
+    [img setContentMode:UIViewContentModeScaleAspectFit];
     [self.view addSubview:img];
-    
-    UIView *textView = [[UIView alloc] initWithFrame:CGRectMake(0, kScreenHeight - height_textViewHeight, kScreenWidth, height_textViewHeight)];
-    [textView setBackgroundColor:[UIColor orangeColor]];
-    [self.view addSubview:textView];
 }
 
 
