@@ -98,7 +98,7 @@
     
     NSLog(@"path is %@", path);
     
-   
+   // 打开系统的分享界面
     // quick look
     //    NSString * finalLocation = [docDir stringByAppendingPathComponent:[fileOriPath lastPathComponent]];
     _documentController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:path]];
@@ -109,6 +109,10 @@
     
     // 打开 可打开此类型的App列表 和 可选操作列表（复制、快速查看、打印等）
     [_documentController presentOptionsMenuFromRect:self.view.bounds inView:self.view animated:YES];
+    
+    // 直接保存到系统相册
+    
+    
     
 }
 
@@ -134,7 +138,8 @@
         CGPoint savedContentOffset = scrollView.contentOffset;
         CGRect savedFrame = scrollView.frame;
         scrollView.contentOffset = CGPointZero;
-        scrollView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height + 70.f);
+        scrollView.frame = CGRectMake(0, 0, scrollView.contentSize.width + savedFrame.origin.x
+                                      , scrollView.contentSize.height + savedFrame.origin.y);
         
         [scrollView.layer renderInContext: UIGraphicsGetCurrentContext()];
         image = UIGraphicsGetImageFromCurrentImageContext();
